@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://bemach1.com.br/wp-content/uploads/2022/03/cropped-Logo-Mach-Favicon-1-32x32.png">
+    <title>Atividade 30/06/22 - Formularios </title>
+    <br>
+    <style>
+        h1{
+            text-align: center;
+        }
+        input{
+            width: auto;
+        }
+        fieldset{
+            display: block;
+            width: 30%;
+        }
+    </style>
+</head>
+<body>
+
+    <h1> Aliste - se </h1>
+
+
+    <form action="https://bemach1.com.br/html-aula-forms/cadastroRecruta.php" method="get" target="_blank">
+
+        <!--Todo input quando não se tem o TYPE="TEXT" a estrutura do html entende que já é um input de TEXTO-->
+        <!-- ATRIBUTOS OBRICATORIOS: 
+            id
+            value
+            OBRIGATORES POIS É A INFORMÇÃO QUE O BACK END RECEBE-->
+
+        <div>
+            <label for="E-Mail"> 
+                Seu e-mail: 
+                    <br>
+                        <input type="email" placeholder="seuemail@seuemail.com" id="E-Mail" value="" name="email">
+            </label>
+        </div>
+
+        <br>
+        
+        <div>
+            <label for="Pwd">
+                Senha:
+                    <br>
+                        <input type="password" placeholder="Crie uma Senha" id="Pwd" name="Senha">
+            </label>
+        </div>
+
+        <br>
+        
+        <div>
+            <label for="NomeCompleto">
+                Nome Completo:
+                    <br>
+                        <input type="text" placeholder="Seu Nome Completo " id="NomeCompleto" name="Nome">
+            </label>
+        </div>
+    
+        <br>
+    
+        <div>
+            <Label for="CPF">
+                CPF (Apenas Números):
+                    <br>
+                        <input type="text" placeholder="00000000000" maxlength="11" id="CPF" name="CPF">
+            </Label>
+        </div>
+
+        <br>
+
+        <div>
+            <label for="RG">
+                RG (Apenas Números):
+                    <br>
+                        <input type="text" placeholder="00000000" maxlength="11" id="RG" name="RG">
+            </label>
+        </div>
+
+        <br>
+
+        <div>
+            <label for="date">
+                Data de Nascimento:
+                    <br>
+                        <input type="date" id="date" name="Nascimento">
+            </label>
+        </div>
+
+        <br>
+
+        <div>
+            <fieldset>
+                <!-- Quando se usa o atributo RADIO - pode se escolhe apenas 1 das opções existentes-->
+                <legend> Necessidades Especiais? </legend>
+                    <input name="NecessidadesEspeciais" type="radio" value="sim" id="Sim">
+                        <label for="Sim"> Sim </label>
+                            <br>
+                                <input name="NecessidadesEspeciais" type="radio" value="não" id="Não">
+                                    <label for="Não"> Não </label>
+            </fieldset>
+        </div>
+
+        <br>
+
+
+
+        <div>
+            <fieldset>
+                <label for="estado"> Qual o Estado (UF) Você Mora? </label>
+                    <br>
+                    <select id="estado" name="estado">
+                        <option value="AC">Acre - AC </option>
+                        <option value="AL">Alagoas - AL </option>
+                        <option value="AP">Amapá - AP </option>
+                        <option value="AM">Amazonas - AM </option>
+                        <option value="BA">Bahia - BA </option>
+                        <option value="CE">Ceará - CE </option>
+                        <option value="DF">Distrito Federal - DF </option>
+                        <option value="ES">Espírito Santo - ES </option>
+                        <option value="GO">Goiás - GO </option>
+                        <option value="MA">Maranhão - MA </option>
+                        <option value="MT">Mato Grosso - MT </option>
+                        <option value="MS">Mato Grosso do Sul -MS </option>
+                        <option value="MG">Minas Gerais -MG </option>
+                        <option value="PA">Pará - PA </option>
+                        <option value="PB">Paraíba - PB </option>
+                        <option value="PR">Paraná - PR </option>
+                        <option value="PE">Pernambuco - PE </option>
+                        <option value="PI">Piauí - PI </option>
+                        <option value="RJ">Rio de Janeiro - RJ </option>
+                        <option value="RN">Rio Grande do Norte - RN </option>
+                        <option value="RS">Rio Grande do Sul - RS </option>
+                        <option value="RO">Rondônia - RO </option>
+                        <option value="RR">Roraima - RR </option>
+                        <option value="SC">Santa Catarina - SC </option>
+                        <option value="SP">São Paulo - SP </option>
+                        <option value="SE">Sergipe - SE </option>
+                        <option value="TO">Tocantins - TO </option>
+                        <option value="EX">Estrangeiro - EX </option>
+                    </select>
+            </fieldset>
+        </div>
+        
+        <br>
+
+        <div>
+            <fieldset>
+                <!--Quando se usa o atributo CHECBOX - pode se escolher 1 ou todos os lementos ou ate mesmo nenhum deles-->
+                <legend> Especializações desejadas </legend>
+                    <input type="checkbox" id="BACK-END" name="BACK-END">
+                        <label for="BACK-END"> Mecânica de aeronaves (Back-end) </label>
+                            <br>
+                                <input type="checkbox" id="FRONT-END" name="FRONT-END">
+                                    <label for="FRONT-END"> Montagem da aeronaves (Front-end) </label>
+                                        <br>
+                                            <input type="checkbox" id="FULL-STACK" name="FULL-STACK">
+                                                <label for="FULL-STACK"> Emgenheiro da aeronaves (FULL-STACK) </label>
+                                                    <br>
+                                                        <input type="checkbox" id="TESTER" name="TESTER">
+                                                            <label for="TESTER"> Piloto (Tester) </label>
+                                                                <br>
+                                                                    <input type="checkbox" id="SCRUM-MASTER" name="SCRUM-MASTER">
+                                                                        <label for="SCRUM-MASTER"> Operador de trafego aéreo (Scrum-Master) </label>
+                                                                            <br>
+            </fieldset>
+        </div>
+
+        <br>
+
+        <div>
+            <label for="Arquivo">
+                Adicione sua Foto: 
+                    <input type="file" id="Arquivo" name="FotoUsuario">
+            </label>
+        </div>
+
+        <br>
+
+        <div>
+            <input type="submit" style="color: rgb(0, 255, 0); background-color: black;" value="Salvar Usuário">
+        </div>
+
+        <br>
+        <hr size="5" width="100%" noshade>
+
+    </form>
+
+</body>
+</html>
