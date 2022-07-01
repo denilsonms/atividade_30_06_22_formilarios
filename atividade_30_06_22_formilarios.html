@@ -25,7 +25,7 @@
     <h1> Aliste - se </h1>
 
 
-    <form action="https://bemach1.com.br/html-aula-forms/cadastroRecruta.php" method="get" target="_blank">
+    <form action="https://bemach1.com.br/html-aula-forms/cadastroRecruta.php" method="post" enctype="multipart/form-data" target="_blank">
 
         <!--Todo input quando não se tem o TYPE="TEXT" a estrutura do html entende que já é um input de TEXTO-->
         <!-- ATRIBUTOS OBRICATORIOS: 
@@ -37,7 +37,7 @@
             <label for="E-Mail"> 
                 Seu e-mail: 
                     <br>
-                        <input type="email" placeholder="seuemail@seuemail.com" id="E-Mail" value="" name="email">
+                        <input type="email" placeholder="seuemail@seuemail.com" id="E-Mail" name="email">
             </label>
         </div>
 
@@ -47,7 +47,7 @@
             <label for="Pwd">
                 Senha:
                     <br>
-                        <input type="password" placeholder="Crie uma Senha" id="Pwd" name="Senha">
+                        <input type="password" placeholder="Crie uma Senha" id="Pwd" name="senha">
             </label>
         </div>
 
@@ -57,7 +57,7 @@
             <label for="NomeCompleto">
                 Nome Completo:
                     <br>
-                        <input type="text" placeholder="Seu Nome Completo " id="NomeCompleto" name="Nome">
+                        <input type="text" placeholder="Seu Nome Completo " id="NomeCompleto" name="nomeCompleto">
             </label>
         </div>
     
@@ -67,7 +67,7 @@
             <Label for="CPF">
                 CPF (Apenas Números):
                     <br>
-                        <input type="text" placeholder="00000000000" maxlength="11" id="CPF" name="CPF">
+                        <input type="text" placeholder="00000000000" maxlength="14" id="CPF" name="cpf">
             </Label>
         </div>
 
@@ -77,7 +77,7 @@
             <label for="RG">
                 RG (Apenas Números):
                     <br>
-                        <input type="text" placeholder="00000000" maxlength="11" id="RG" name="RG">
+                        <input type="text" placeholder="00000000" maxlength="11" id="RG" name="rg">
             </label>
         </div>
 
@@ -87,7 +87,7 @@
             <label for="date">
                 Data de Nascimento:
                     <br>
-                        <input type="date" id="date" name="Nascimento">
+                        <input type="date" id="date" name="nascimento">
             </label>
         </div>
 
@@ -97,11 +97,11 @@
             <fieldset>
                 <!-- Quando se usa o atributo RADIO - pode se escolhe apenas 1 das opções existentes-->
                 <legend> Necessidades Especiais? </legend>
-                    <input name="NecessidadesEspeciais" type="radio" value="sim" id="Sim">
-                        <label for="Sim"> Sim </label>
-                            <br>
-                                <input name="NecessidadesEspeciais" type="radio" value="não" id="Não">
-                                    <label for="Não"> Não </label>
+                    <input name="necessidadesEspeciais" type="radio" value="sim" id="Sim">
+                    <label for="Sim"> Sim </label>
+                    <br>
+                     <input name="necessidadesEspeciais" type="radio" value="não" id="Não">
+                    <label for="Não"> Não </label>
             </fieldset>
         </div>
 
@@ -152,21 +152,21 @@
             <fieldset>
                 <!--Quando se usa o atributo CHECBOX - pode se escolher 1 ou todos os lementos ou ate mesmo nenhum deles-->
                 <legend> Especializações desejadas </legend>
-                    <input type="checkbox" id="BACK-END" name="BACK-END">
-                        <label for="BACK-END"> Mecânica de aeronaves (Back-end) </label>
-                            <br>
-                                <input type="checkbox" id="FRONT-END" name="FRONT-END">
-                                    <label for="FRONT-END"> Montagem da aeronaves (Front-end) </label>
-                                        <br>
-                                            <input type="checkbox" id="FULL-STACK" name="FULL-STACK">
-                                                <label for="FULL-STACK"> Emgenheiro da aeronaves (FULL-STACK) </label>
-                                                    <br>
-                                                        <input type="checkbox" id="TESTER" name="TESTER">
-                                                            <label for="TESTER"> Piloto (Tester) </label>
-                                                                <br>
-                                                                    <input type="checkbox" id="SCRUM-MASTER" name="SCRUM-MASTER">
-                                                                        <label for="SCRUM-MASTER"> Operador de trafego aéreo (Scrum-Master) </label>
-                                                                            <br>
+                    <input type="checkbox" id="BACK-END" name="especializacao1" value="BACK-END">
+                    <label for="BACK-END"> Mecânica de aeronaves (Back-end) </label>
+                    <br>
+                    <input type="checkbox" id="FRONT-END" name="especializacao2" value="FRONT-END">
+                    <label for="FRONT-END"> Montagem da aeronaves (Front-end) </label>
+                    <br>
+                    <input type="checkbox" id="FULL-STACK" name="especializacao3" value="FULL-STACK">
+                    <label for="FULL-STACK"> Emgenheiro da aeronaves (FULL-STACK) </label>
+                    <br>
+                    <input type="checkbox" id="TESTER" name="especializacao4" value="TESTER">
+                    <label for="TESTER"> Piloto (Tester) </label>
+                    <br>
+                    <input type="checkbox" id="SCRUM-MASTER" name="especializacao5" value="SCRUM-MASTER">
+                    <label for="SCRUM-MASTER"> Operador de trafego aéreo (Scrum-Master) </label>
+                    <br>
             </fieldset>
         </div>
 
@@ -175,7 +175,7 @@
         <div>
             <label for="Arquivo">
                 Adicione sua Foto: 
-                    <input type="file" id="Arquivo" name="FotoUsuario">
+                    <input type="file" id="Arquivo" name="foto">
             </label>
         </div>
 
